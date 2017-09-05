@@ -7,31 +7,34 @@ export class MyHighLightDirective {
   @Input() 
   highlightColor: string;
 
-  @HostBinding("style.border")
-  border:string;
+  // @HostBinding("style.border")
+  // border:string;
+
+  @HostBinding("class")
+  myClass:string;
 
   constructor(private el: ElementRef) {
     // console.log(el);
     // el.nativeElement.style.backgroundColor = '#ff3300';
   }
 
-  @HostListener('mouseenter') onMouseEnter() {
-    this.highlight(this.highlightColor);
-  }
+  // @HostListener('mouseenter') onMouseEnter() {
+  //   this.highlight(this.highlightColor);
+  // }
   
-  @HostListener('mouseleave') onMouseLeave() {
-    this.highlight(null);
-  }
+  // @HostListener('mouseleave') onMouseLeave() {
+  //   this.highlight(null);
+  // }
   
   private highlight(color: string) {
     this.el.nativeElement.style.backgroundColor = color;
   }
 
-  @HostListener('click') onClick() {
-    if(this.border){
-      this.border="";
-    }else{
-      this.border="1px solid #ff3300";
-    }
-  }
+  // @HostListener('click') onClick() {
+  //   if(this.myClass){
+  //     this.myClass="";
+  //   }else{
+  //     this.myClass="my-border";
+  //   }
+  // }
 }
