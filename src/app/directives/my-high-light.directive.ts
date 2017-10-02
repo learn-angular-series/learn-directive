@@ -18,13 +18,13 @@ export class MyHighLightDirective {
     // el.nativeElement.style.backgroundColor = '#ff3300';
   }
 
-  // @HostListener('mouseenter') onMouseEnter() {
-  //   this.highlight(this.highlightColor);
-  // }
+  @HostListener('mouseenter') onMouseEnter() {
+    this.highlight(this.highlightColor);
+  }
   
-  // @HostListener('mouseleave') onMouseLeave() {
-  //   this.highlight(null);
-  // }
+  @HostListener('mouseleave') onMouseLeave() {
+    this.highlight(null);
+  }
   
   private highlight(color: string) {
     this.el.nativeElement.style.backgroundColor = color;
