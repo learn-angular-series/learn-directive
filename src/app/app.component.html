@@ -1,4 +1,9 @@
 <div class="container">
     <h1>My First Attribute Directive</h1>
     <p my-high-light highlightColor="#ff3300">内容高亮显示！</p>
+    <div *ngFor="let item of [1,2,3]">
+        <card *appDelay="500 * item">
+            第 {{item}} 张卡片
+        </card>
+    </div>
 </div>
