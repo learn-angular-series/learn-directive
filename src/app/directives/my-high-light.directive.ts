@@ -14,8 +14,8 @@ export class MyHighLightDirective {
   myClass:string;
 
   constructor(private el: ElementRef) {
-    // console.log(el);
-    // el.nativeElement.style.backgroundColor = '#ff3300';
+    console.log(el);
+    el.nativeElement.style.backgroundColor = '#ff3300';
   }
 
   @HostListener('mouseenter') onMouseEnter() {
